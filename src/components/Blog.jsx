@@ -64,10 +64,12 @@ export const blogPosts = [
   },
 ];
 
-const CARD_GAP = 32;
-
 function getCardsVisible() {
   return window.innerWidth <= 768 ? 1 : 3;
+}
+
+function getCardGap() {
+  return window.innerWidth <= 768 ? 0 : 32;
 }
 
 function Blog() {
@@ -87,7 +89,7 @@ function Blog() {
       setCurrentPage(0);
       if (trackRef.current) {
         const firstCard = trackRef.current.querySelector('.blog__card');
-        if (firstCard) setSlideWidth(firstCard.offsetWidth + CARD_GAP);
+        if (firstCard) setSlideWidth(firstCard.offsetWidth + getCardGap());
       }
     };
     measure();

@@ -183,13 +183,13 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .blog__carousel {
     --blog-card-width: 100%;
   }
 
   .blog__track {
-    gap: 16px;
-    padding: 0 12px;
+    gap: 0;
+    padding: 0;
   }
 }
