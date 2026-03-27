@@ -65,11 +65,15 @@ export const blogPosts = [
 ];
 
 function getCardsVisible() {
-  return window.innerWidth <= 768 ? 1 : 3;
+  if (window.innerWidth <= 640) return 1;
+  if (window.innerWidth <= 1024) return 2;
+  return 3;
 }
 
 function getCardGap() {
-  return window.innerWidth <= 768 ? 0 : 32;
+  if (window.innerWidth <= 640) return 0;
+  if (window.innerWidth <= 1024) return 24;
+  return 32;
 }
 
 function Blog() {

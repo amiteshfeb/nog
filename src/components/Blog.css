@@ -170,7 +170,7 @@
 
   .blog__track {
     gap: 24px;
-    padding: 0 12px;
+    padding: 0;
   }
 
   .blog__title {
@@ -183,7 +183,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .blog__carousel {
     --blog-card-width: 100%;
   }
