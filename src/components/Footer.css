@@ -1,0 +1,270 @@
+/* Contact / Help Section */
+.contact {
+  background-color: #FAF7F2;
+  padding: 80px 0 100px;
+}
+
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.contact__heading {
+  font-size: 36px;
+  font-weight: 800;
+  font-style: italic;
+  color: #270000;
+  margin: 0 0 48px;
+  line-height: 1.2;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.contact__item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contact__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid #270000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #270000;
+}
+
+.contact__item-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #270000;
+  margin: 0 0 8px;
+}
+
+.contact__item-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #270000;
+  opacity: 0.7;
+  margin: 0 0 12px;
+}
+
+.contact__item-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #FF8A00;
+  text-decoration: none;
+}
+
+.contact__item-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: #fff;
+  padding: 60px 0 40px;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer__col-heading {
+  font-size: 16px;
+  font-weight: 800;
+  color: #270000;
+  margin-bottom: 20px;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__links--no-heading {
+  padding-top: 36px;
+}
+
+.footer__links li {
+  margin-bottom: 12px;
+}
+
+.footer__links a {
+  color: #6B6B6B;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: #270000;
+}
+
+.footer__bottom {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid #E8E4DF;
+}
+
+.footer__logo {
+  margin-bottom: 16px;
+}
+
+.footer__logo-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: #270000;
+  letter-spacing: -0.5px;
+}
+
+.footer__info {
+  font-size: 14px;
+  color: #6B6B6B;
+  margin-bottom: 8px;
+}
+
+.footer__privacy {
+  margin-bottom: 8px;
+}
+
+.footer__privacy a {
+  font-size: 14px;
+  color: #6B6B6B;
+  text-decoration: underline;
+}
+
+.footer__privacy a:hover {
+  color: #270000;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  color: #6B6B6B;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: #ffffff;
+  border: 1px solid #e8e4df;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 960px;
+  width: calc(100% - 32px);
+  color: #270000;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cookie-banner__text a {
+  color: #FF8A00;
+  font-weight: 600;
+}
+
+.cookie-banner__text a:hover {
+  text-decoration: underline;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-banner__btn {
+  background: #FF8A00;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cookie-banner__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-banner__link {
+  font-size: 13px;
+  color: #6B6B6B;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .cookie-banner__actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0 80px;
+  }
+
+  .contact__container {
+    padding: 0 20px;
+  }
+
+  .contact__heading {
+    font-size: 28px;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__links--no-heading {
+    padding-top: 0;
+  }
+
+  .footer__container {
+    padding: 0 20px;
+  }
+}

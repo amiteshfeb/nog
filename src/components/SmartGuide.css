@@ -1,0 +1,130 @@
+/* ===== SmartGuide Section ===== */
+.smartguide {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  padding: 80px 40px;
+}
+
+.smartguide__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Left: Text Content */
+.smartguide__content {
+  max-width: 600px;
+}
+
+.smartguide__heading {
+  font-size: 40px;
+  font-weight: 800;
+  color: #270000;
+  line-height: 1.15;
+  margin: 0 0 24px;
+}
+
+.smartguide__text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #270000;
+  margin: 0 0 32px;
+  opacity: 0.85;
+}
+
+.smartguide__text strong {
+  font-weight: 700;
+  opacity: 1;
+}
+
+.smartguide__btn {
+  display: inline-grid;
+  grid-template-rows: repeat(2, 100%);
+  grid-template-columns: 100%;
+  overflow: hidden;
+  background: #270000;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  height: 56px;
+  margin-bottom: 28px;
+}
+
+.smartguide__btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 36px;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.smartguide__btn:hover span {
+  transform: translateY(-100%);
+}
+
+.smartguide__footnote {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #270000;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.smartguide__link {
+  color: #2D7A0F;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.smartguide__link:hover {
+  opacity: 0.7;
+}
+
+/* Right: Image */
+.smartguide__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smartguide__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .smartguide {
+    padding: 60px 24px;
+  }
+
+  .smartguide__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .smartguide__heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .smartguide {
+    padding: 48px 16px;
+  }
+
+  .smartguide__heading {
+    font-size: 28px;
+  }
+
+  .smartguide__text {
+    font-size: 15px;
+  }
+}

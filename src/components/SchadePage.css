@@ -1,0 +1,135 @@
+.schade-page {
+  background: #faf7f2;
+  min-height: 100vh;
+}
+
+.schade-page__hero {
+  padding: 80px 24px 32px;
+  background: linear-gradient(135deg, #fff1e0 0%, #ffffff 50%, #fff7ec 100%);
+}
+
+.schade-page__hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  color: #270000;
+}
+
+.schade-page__eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #ff8a00;
+}
+
+.schade-page__title {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.schade-page__subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0;
+  color: #4a3a37;
+}
+
+.schade-page__content {
+  padding: 32px 24px 80px;
+}
+
+.schade-page__card {
+  background: #ffffff;
+  border: 1px solid #e8e4df;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+.schade-page__card h2 {
+  margin: 0 0 24px;
+  color: #270000;
+  font-size: 24px;
+}
+
+.schade-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.schade-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+}
+
+.schade-page__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: #270000;
+}
+
+.schade-page__field span {
+  font-weight: 600;
+}
+
+.schade-page__field input,
+.schade-page__field textarea {
+  width: 100%;
+  border: 1px solid #e8e4df;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  color: #270000;
+  background: #fff;
+}
+
+.schade-page__field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.schade-page__field--full {
+  grid-column: span 2;
+}
+
+.schade-page__submit {
+  align-self: flex-start;
+  background: #ff8a00;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.schade-page__submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .schade-page__title {
+    font-size: 32px;
+  }
+
+  .schade-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schade-page__field--full {
+    grid-column: span 1;
+  }
+}

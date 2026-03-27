@@ -1,0 +1,107 @@
+/* ===== Professions Section ===== */
+.professions {
+  background: linear-gradient(180deg, #F3ECFF 0%, #EDE4FF 100%);
+  border-radius: 24px;
+  margin: 20px 20px 0;
+  padding: 80px 60px;
+  font-family: 'Inter', sans-serif;
+}
+
+.professions__container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.professions__heading {
+  font-size: 36px;
+  font-weight: 800;
+  color: #270000;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.professions__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.professions__card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  min-height: 100px;
+}
+
+.professions__card:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.professions__card-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #270000;
+}
+
+.professions__card-arrow {
+  font-size: 20px;
+  color: #270000;
+  opacity: 0.5;
+  align-self: flex-end;
+}
+
+.professions__more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2A1A3E;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 24px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.professions__more:hover {
+  opacity: 0.9;
+}
+
+.professions__more-arrow {
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .professions {
+    margin: 16px 12px 0;
+    padding: 48px 24px;
+  }
+
+  .professions__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .professions__heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .professions {
+    margin: 12px 8px 0;
+    padding: 36px 16px;
+    border-radius: 16px;
+  }
+
+  .professions__grid {
+    grid-template-columns: 1fr;
+  }
+}

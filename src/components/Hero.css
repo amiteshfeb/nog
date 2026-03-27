@@ -1,0 +1,298 @@
+/* Hero Section */
+.hero {
+  padding: 0;
+}
+
+/* Cards Container */
+.hero__cards-container {
+  padding: 80px 80px 0;
+}
+
+.hero__cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+/* Card Wrapper */
+.hero__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* Keep cards visible on initial load so refresh isn't blank */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* When no video, animate immediately */
+.hero--animate .hero__card-wrapper--animate {
+  animation: cardFadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.hero--animate .hero__card-wrapper--animate:nth-child(1) { animation-delay: 0.1s; }
+.hero--animate .hero__card-wrapper--animate:nth-child(2) { animation-delay: 0.3s; }
+.hero--animate .hero__card-wrapper--animate:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card */
+.hero__card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 394/507;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero__card:hover {
+  transform: scale(1.02);
+}
+
+/* Price Badge */
+.hero__card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+}
+
+.hero__card-badge span {
+  background: white;
+  color: #270000;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Background image */
+.hero__card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Bottom overlay */
+.hero__card-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 80px 24px 24px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+}
+
+.hero__card-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.hero__card-description {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.hero__card-btn {
+  width: 100%;
+  background: #FF8A00;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  display: grid;
+  grid-template-rows: repeat(2, 100%);
+  grid-template-columns: 100%;
+  overflow: hidden;
+  height: 52px;
+}
+
+.hero__card-btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.hero__card-btn:hover span {
+  transform: translateY(-100%);
+}
+
+/* Lees meer link */
+.hero__card-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px 0 8px;
+  color: #270000;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.hero__card-link:hover {
+  opacity: 0.7;
+}
+
+.hero__link-arrow {
+  font-size: 16px;
+}
+
+/* Trust Bar */
+.hero__trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 280px;
+  padding: 36px 104px 16px;
+  max-width: 1230px;
+  margin: 0 auto;
+  border-top: 1px solid #e8e4df;
+  margin-top: 10px;
+  transition: opacity 0.3s ease, max-height 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.hero__trust-bar--hidden {
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  border-top: none;
+  overflow: hidden;
+}
+
+.hero__trustpilot {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.hero__trustpilot-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.hero__trustpilot-star {
+  color: #00B67A;
+  font-size: 20px;
+}
+
+.hero__trustpilot-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #270000;
+}
+
+.hero__trustpilot-rating {
+  font-size: 14px;
+  color: #6B6B6B;
+}
+
+.hero__trustpilot-brand {
+  font-size: 14px;
+  font-weight: 600;
+  color: #270000;
+}
+
+.hero__media-logos {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__media-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__media-logo-img {
+  height: 68px;
+  width: auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero__cards-grid {
+    gap: 16px;
+  }
+
+  .hero__card-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero__cards-container {
+    padding: 60px 48px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__cards-container {
+    padding: 16px 16px 0;
+  }
+
+  .hero__cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero__card {
+    aspect-ratio: 4/3;
+  }
+
+  /* Show top center of the image on mobile */
+  .hero__card-bg {
+    object-position: center top;
+  }
+
+  .hero__trust-bar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .hero__media-logos {
+    justify-content: center;
+  }
+}
