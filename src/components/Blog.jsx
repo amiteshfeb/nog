@@ -64,20 +64,27 @@ export const blogPosts = [
   },
 ];
 
-const CARDS_VISIBLE = 3;
 const CARD_GAP = 32;
+
+function getCardsVisible() {
+  return window.innerWidth <= 768 ? 1 : 3;
+}
 
 function Blog() {
   const [currentPage, setCurrentPage] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
+  const [cardsVisible, setCardsVisible] = useState(getCardsVisible());
   const [highlightAnimated, setHighlightAnimated] = useState(false);
-  const totalPages = blogPosts.length - CARDS_VISIBLE + 1;
+  const totalPages = blogPosts.length - cardsVisible + 1;
   const intervalRef = useRef(null);
   const trackRef = useRef(null);
   const headingRef = useRef(null);
 
   useEffect(() => {
     const measure = () => {
+      const newCardsVisible = getCardsVisible();
+      setCardsVisible(newCardsVisible);
+      setCurrentPage(0);
       if (trackRef.current) {
         const firstCard = trackRef.current.querySelector('.blog__card');
         if (firstCard) setSlideWidth(firstCard.offsetWidth + CARD_GAP);
@@ -91,7 +98,10 @@ function Blog() {
   const startAutoplay = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
-      setCurrentPage((prev) => (prev >= totalPages - 1 ? 0 : prev + 1));
+      setCurrentPage((prev) => {
+        const pages = blogPosts.length - getCardsVisible() + 1;
+        return prev >= pages - 1 ? 0 : prev + 1;
+      });
     }, 5000);
   };
 
